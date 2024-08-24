@@ -1,0 +1,79 @@
+<?php
+
+namespace App\Http\Controllers;
+
+
+use Illuminate\Http\Request;
+use App\Models\Post;
+
+
+class PostController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     */
+    public function home()
+    {
+        $posts = Post::select('posts.id' , 'posts.title', 'posts.content', 'posts.image','posts.created_at')
+        -> orderBy('posts.created_at', 'desc')
+        -> limit(3)
+        ->get();
+        //dd($posts);
+
+        return view('home' , compact('posts'));    
+    }
+
+     public function index()
+    {
+
+        return view('index'); //
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
+    {
+        return view('post'); //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        //
+    }
+}
