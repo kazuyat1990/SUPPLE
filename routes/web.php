@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,6 @@ use App\Http\Controllers\PostController;
 */
 
 
-Route::get('/', [PostController::class, 'home'])->name('home');
-Route::get('/posts', [PostController::class, 'index'])->name('post.index');
-Route::get('/posts/{id}', [PostController::class, 'show'])->name('post.show');
+Route::get('/', [BlogController::class, 'home'])->name('home');
+Route::get('/blog', [BlogController::class, 'list'])->name('list');
+Route::get('/blog/{id}', [BlogController::class, 'show'])->name('show');

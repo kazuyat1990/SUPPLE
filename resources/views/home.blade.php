@@ -123,11 +123,11 @@
             @foreach ($posts as $post)
                 <div class="post-card">
                     <div class="post-img-container">
-                        <img class="post-img" src="{{$post->image}}" alt=post >
+                        <img class="post-img" src="{{ $post->image }}" alt=post >
                     </div>
                     <div class="post-text">
-                        <p class="post-text-date english-text">{{$post->created_at->format('Y/m/d')}}</p>
-                        <p class="post-text-content">{{$post->title}}</p>
+                        <p class="post-text-date english-text">{{ $post->created_at->format('Y/m/d') }}</p>
+                        <p class="post-text-content">{{ $post->title }}</p>
                     </div>
                 </div>
             @endforeach
@@ -137,7 +137,7 @@
                 
             
         <div class="button-blog">
-            <a href="#" class="button-bk english-text">MORE</a>
+            <a href="{{ route('list') }}" class="button-bk english-text">MORE</a>
         </div>
     </div>
 

@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-
 use Illuminate\Http\Request;
 use App\Models\Post;
 
-
-class PostController extends Controller
+class BlogController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -22,11 +20,17 @@ class PostController extends Controller
         return view('home' , compact('posts'));    
     }
 
-     public function index()
+    public function list()
     {
+        $posts = Post::orderBy('posts.created_at', 'desc')
+        ->get();
+        //dd($posts);
 
-        return view('index'); //
+        return view('list' , compact('posts'));    
     }
+
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -49,7 +53,7 @@ class PostController extends Controller
      */
     public function show(string $id)
     {
-        return view('post'); //
+        //
     }
 
     /**

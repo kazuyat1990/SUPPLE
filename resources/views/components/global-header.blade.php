@@ -2,7 +2,7 @@
     
     <div class="g-header">
         <div class="logo">
-            <a href="#"><img src="/img/logo.svg" alt="logo"></a>
+            <a href="{{ route('home') }}"><img src="/img/logo.svg" alt="logo"></a>
         </div>
 
         <div class="header-menu">
@@ -28,10 +28,5 @@
                 </ul>
             </nav>
         </div>
-
-   
-
-
-
 
 </div>

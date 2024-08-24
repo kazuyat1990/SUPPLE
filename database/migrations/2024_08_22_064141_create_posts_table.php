@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('posts', function (Blueprint $table) {
-            $table->id();
+        $table->id();
         $table->string('title')->comment('記事タイトル');  // タイトルカラム
         $table->text('content')->comment('記事コンテンツ');  // コンテンツカラム
         $table->string('image')->nullable()->comment('画像');  // 画像カラム

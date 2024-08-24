@@ -18,9 +18,8 @@
         
         <link rel="stylesheet" href="/css/color.css">
         <link rel="stylesheet" href="/css/main.css">
-        @if( isset($script) )
-            {{ $script }}
-        @endif
+        @stack('styles') <!-- CSSファイルをここで読み込み -->
+        
     </head>
     <body class="">
         <div class="">

@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6, .english-text {
 }
 
 .logo{
-    width:200px;
+    width:20%;
 }
 
 .menu-list{
@@ -36,6 +36,7 @@ h1, h2, h3, h4, h5, h6, .english-text {
     margin-right: 32px;
     /*文字間は一旦飛ばす*/
     color: #524433;
+    font-size: 14px;
 }
 
 .list:last-child {
@@ -45,7 +46,7 @@ h1, h2, h3, h4, h5, h6, .english-text {
 .onlineshop{
     background-color: #524433;
     color: white;
-    padding: 14.5px 20px;
+    padding: 2% 20px;
 }
 
 /*main*/
@@ -265,6 +266,7 @@ h1, h2, h3, h4, h5, h6, .english-text {
 
 .tenpo{
     padding: 0 10px;
+    font-size: 14px;
 
 }
 
@@ -306,35 +308,37 @@ h1, h2, h3, h4, h5, h6, .english-text {
     width: 100%;
     padding-top: 100%;
     overflow: hidden;
-  }
+}
   
-  .post-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .post-text {
-    padding-top: 20px;
-  }
+.post-img {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
 
-  .post-text-date{
-    color: #524433;
-    font-size: 0.875rem;
-  }
+.post-text {
+padding-top: 20px;
+}
 
-  .post-text-content{
-    padding-top: 8px;
-  }
+.post-text-date{
+color: #524433;
+font-size: 0.875rem;
+}
 
-  .list-sp {
+.post-text-content{
+padding-top: 8px;
+}
+
+@media (min-width: 768px) {
+    .list-sp {
     display: none;
-  }
+    }
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
 
     /*header*/
     .list-pc {
@@ -343,14 +347,26 @@ h1, h2, h3, h4, h5, h6, .english-text {
 
     .list-sp .list{
         margin-right: 5%;
-        margin-left:5%;
+        margin-left: 5%;
         /*文字間は一旦飛ばす*/
         color: white;
         padding: 14px 0;
+        font-size: 12px;
     }
 
     .list-sp .list:last-child {
         margin-right: 5%; /* 最後のアイテムだけ margin-right を 0 に設定 */
+    }
+
+    .onlineshop{
+        background-color: #524433;
+        color: white;
+        padding: 14px 20px;
+        font-size: 12px;
+    }
+
+    .logo{
+        width:30%;
     }
   
     /*body*/
