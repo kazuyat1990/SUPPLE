@@ -23,7 +23,7 @@ class BlogController extends Controller
     public function list()
     {
         $posts = Post::orderBy('posts.created_at', 'desc')
-        ->get();
+        ->paginate(5);
         //dd($posts);
 
         return view('list' , compact('posts'));    
@@ -53,7 +53,12 @@ class BlogController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $post = Post::where('posts.id', $id)
+        ->first();
+
+        $recipe_recode = Post::find($id);
+        //dd($post);
+        return view('show' , compact('post') );
     }
 
     /**

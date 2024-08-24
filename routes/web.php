@@ -18,4 +18,4 @@ use App\Http\Controllers\BlogController;
 
 Route::get('/', [BlogController::class, 'home'])->name('home');
 Route::get('/blog', [BlogController::class, 'list'])->name('list');
-Route::get('/blog/{id}', [BlogController::class, 'show'])->name('show');
+Route::get('/blog/{id}', [BlogController::class, 'show'])->name('blog.show');

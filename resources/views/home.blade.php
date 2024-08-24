@@ -121,7 +121,7 @@
     
         <div class="post-new">
             @foreach ($posts as $post)
-                <div class="post-card">
+                <a href="{{ route('blog.show',['id' => $post['id']]) }}" class="post-card">
                     <div class="post-img-container">
                         <img class="post-img" src="{{ $post->image }}" alt=post >
                     </div>
@@ -129,7 +129,7 @@
                         <p class="post-text-date english-text">{{ $post->created_at->format('Y/m/d') }}</p>
                         <p class="post-text-content">{{ $post->title }}</p>
                     </div>
-                </div>
+                </a>
             @endforeach
         </div>
             

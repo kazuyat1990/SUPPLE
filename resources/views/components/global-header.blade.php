@@ -11,7 +11,7 @@
                     <li class="list list-pc">CONCEPT</li>
                     <li class="list list-pc">MENU</li>
                     <li class="list list-pc">SHOPLIST</li>
-                    <li class="list list-pc">BLOG&NEWS</li>
+                    <li class="list list-pc"><a href="{{ route('list') }}">BLOG&NEWS</a></li>
                     <li class="list onlineshop">ONLINE SHOP</li>
                 </ul>
             </nav>
@@ -23,7 +23,7 @@
                     <li class="list">CONCEPT</li>
                     <li class="list">MENU</li>
                     <li class="list">SHOPLIST</li>
-                    <li class="list">BLOG&</li>
+                    <li class="list"><a href="{{ route('list') }}">BLOG&</a></li>
                 
                 </ul>
             </nav>

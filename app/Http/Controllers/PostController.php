@@ -49,7 +49,7 @@ class PostController extends Controller
      */
     public function show(string $id)
     {
-        return view('post'); //
+        return view('show'); //
     }
 
     /**
