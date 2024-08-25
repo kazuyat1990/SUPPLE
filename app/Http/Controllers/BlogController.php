@@ -14,8 +14,7 @@ class BlogController extends Controller
     {
         $posts = Post::orderBy('posts.created_at', 'desc')
         ->limit(3)
-        ->get();
-        //dd($posts);
+        ->get();    
 
         return view('home' , compact('posts'));    
     }
@@ -23,10 +22,9 @@ class BlogController extends Controller
     public function list()
     {
         $posts = Post::orderBy('posts.created_at', 'desc')
-        ->paginate(5);
-        //dd($posts);
+        ->paginate(12);
 
-        return view('list' , compact('posts'));    
+        return view('list', compact('posts'));  
     }
 
 
@@ -57,7 +55,6 @@ class BlogController extends Controller
         ->first();
 
         $recipe_recode = Post::find($id);
-        //dd($post);
         return view('show' , compact('post') );
     }
 

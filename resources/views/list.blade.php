@@ -1,5 +1,6 @@
 <x-app-layout>
 
+
     @push('styles')
         <link rel="stylesheet" href="{{ asset('css/list.css') }}">
     @endpush
@@ -23,9 +24,10 @@
                 </a>
             @endforeach
         </div>
-    <div class="pagination">
-        {{ $posts->links('vendor.pagination.bootstrap-4') }}
-    </div>
+        <div class="pagination">
+            {{ $posts->onEachSide(0)->links('vendor.pagination.default') }}
+        </div>
+        <!-- 省略表示 "..." ができていない-->
     </div>
   
 

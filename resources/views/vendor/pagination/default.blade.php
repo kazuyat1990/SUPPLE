@@ -1,3 +1,8 @@
+@push('styles')
+<link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+@endpush
+    
+
 @if ($paginator->hasPages())
     <nav>
         <ul class="pagination">

@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
+use Faker\Factory as Faker;
 
 
 class PostsTableSeeder extends Seeder
@@ -15,10 +16,13 @@ class PostsTableSeeder extends Seeder
      */
     public function run(): void
     {
-        for ($i = 0; $i < 10; $i++) {
+
+        $faker = Faker::create('ja_JP');
+
+        for ($i = 0; $i < 60; $i++) {
             DB::table('posts')->insert([
-                'title' => 'News of ' . Str::random(10),
-                'content' => 'This is a sample content for ' . Str::random(10),
+                'title' => '講習会を開催しました。',
+                'content' => $faker->realText(800),
                 'image' => 'img/other/_thumb-post 1.jpg' ,
                 'created_at' => now(),
                 'updated_at' => now(),

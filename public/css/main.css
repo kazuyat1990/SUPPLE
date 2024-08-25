@@ -375,16 +375,6 @@ padding-top: 8px;
 font-size: 22px                         ;   
 }
 
-.pagination{
-    justify-content: center;
-    margin-top: 40px;
-}
-
-.pagination a {
-    background-color: #524433;
-    border-color: #524433;
-    color: white;
-}
 
 @media (min-width: 769px) {
     .list-sp {
