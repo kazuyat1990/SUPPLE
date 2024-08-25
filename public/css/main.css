@@ -6,7 +6,16 @@ body {
 
 h1, h2, h3, h4, h5, h6, .english-text {
     font-family: 'Montserrat', sans-serif; /* 見出しや特定の英字用のクラスに英字フォントを適用 */
-    letter-spacing: 5px;
+    letter-spacing: 4px;
+}
+
+h2 {
+    font-size: 32px !important;
+}
+
+a:hover {
+    text-decoration: none;
+    color: unset;
 }
 
 .g-header{
@@ -25,12 +34,7 @@ h1, h2, h3, h4, h5, h6, .english-text {
     align-items: center;
 }
 
-.menu-list-sp{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #524433;
-}
+
 
 .list{
     margin-right: 32px;
@@ -60,8 +64,6 @@ h1, h2, h3, h4, h5, h6, .english-text {
 
 .h2-concept{
     margin-top: 64px;
-    font-size:  32px;
-    letter-spacing: 20%;
 }
 
 .concept-img{
@@ -86,27 +88,73 @@ h1, h2, h3, h4, h5, h6, .english-text {
     margin-top: 48px;
 }
 
+
 .button-bk{
     font-size: 1.125rem;
+    display: inline-block;
     padding: 21px 0;
     background-color: black;
     color: white;
-    display: block;
-    width: 240px;
-    margin: 0 auto;
     text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    width: 240px;
+}
 
+.button-bk::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 25px;
+    height: 1px;
+    background-color: white;
+    transform: translateY(-50%);
+}
+
+.button-bk:hover::after {
+    width: 35px;
+    transition: width 0.3s;
+}
+
+.button-bk:hover {
+    transition: background-color 0.3s;
+    color: white    ;
 }
 
 .button-wt{
     font-size: 1.125rem;
-    padding: 21px 91px;
+    display: inline-block;
+    padding: 21px 0;
     background-color: white;
     color: black;
-    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
     width: 240px;
-    margin: 0 auto;
+}
 
+.button-wt::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 25px;
+    height: 1px;
+    background-color: black;
+    transform: translateY(-50%);
+}
+
+.button-wt:hover::after {
+    width: 35px;
+    transition: width 0.3s;
+}
+
+.button-wt:hover {
+    transition: background-color 0.3s;
+    color: black;
 }
 
 .menu-container{
@@ -195,6 +243,7 @@ h1, h2, h3, h4, h5, h6, .english-text {
 
 .button-shop{
     margin-top: 48px;
+    text-align: center;
 }
 
 .separate{
@@ -209,8 +258,6 @@ h1, h2, h3, h4, h5, h6, .english-text {
 
 .h2-blog{
     margin-top: 64px;
-    font-size: 32px;
-    letter-spacing: 20%;
 }
 
 .button-blog{
@@ -238,12 +285,6 @@ h1, h2, h3, h4, h5, h6, .english-text {
 
 .ig-post{
     width: 15%;
-}
-
-.h2-ig{
-    font-size:  32px;
-    letter-spacing: 20%;
-
 }
 
 .button-ig{
@@ -331,16 +372,21 @@ font-size: 0.875rem;
 
 .post-text-content{
 padding-top: 8px;
+font-size: 22px                         ;   
 }
 
 .pagination{
-    margin-top: 60px;
-    display: flex;
     justify-content: center;
-
+    margin-top: 40px;
 }
 
-@media (min-width: 768px) {
+.pagination a {
+    background-color: #524433;
+    border-color: #524433;
+    color: white;
+}
+
+@media (min-width: 769px) {
     .list-sp {
     display: none;
     }
@@ -348,28 +394,56 @@ padding-top: 8px;
 
 @media (max-width: 768px) {
 
+    h2 {
+        font-size: 24px !important;
+    }
+
     /*header*/
     .list-pc {
       display: none;
     }
 
-    .list-sp .list{
-        margin-right: 5%;
-        margin-left: 5%;
-        /*文字間は一旦飛ばす*/
-        color: white;
+    .list-sp {
         padding: 14px 0;
+        background-color: #524433;
+
+    }
+
+    .menu-list-sp{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+          
+    }
+
+    .list-sp .list{
+        color: white;
         font-size: 12px;
+        border-right: 1px solid white;
+        padding-right: 8%;
+    }
+
+    @media (max-width: 540px) {
+        .list-sp .list{
+            padding-right: 2.5%;
+        }
     }
 
     .list-sp .list:last-child {
-        margin-right: 5%; /* 最後のアイテムだけ margin-right を 0 に設定 */
+        margin-right: 0; /* 最後のアイテムだけ margin-right を 0 に設定 */
+        border-right: 0;
+        padding-right: 0;
+    }
+
+    .list {
+        margin-right: 0;
+
     }
 
     .onlineshop{
         background-color: #524433;
         color: white;
-        padding: 14px 20px;
+        padding: 14px 21.5px;
         font-size: 12px;
     }
 
@@ -401,9 +475,36 @@ padding-top: 8px;
         margin-right: 5%;
     }
 
+    .mainvisual{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .main_img {
+        object-fit: cover;
+        max-width: 1080px;
+        display: block;
+        margin: auto;
+        height: auto;
+    }
+
+    .text-20 {
+        font-size: 16px;
+    }
+
+    .p-text-2 {
+        font-size: 14px;
+    }
+
+    .br_text {
+        display: none;
+    }
 
     .menu-table{
         flex-direction: column;
+        margin: 48px 0;
     }
 
     .menu{
@@ -449,5 +550,78 @@ padding-top: 8px;
     .shop-item:first-child {
         margin-left: 0; /* 最後のアイテムだけ margin-right を 0 に設定 */
     }
+
+    .post-text{
+        padding-top: 16px;
+    }
+
+    .button-blog{
+        margin-top: 40px;
+    }
+
+    .button-bk{
+        font-size: 14px;
+        padding: 18px 0;
+        width: 220px;
+    }
+
+    .button-wt{
+        font-size: 14px;
+        padding: 18px 0;
+        width: 220px;
+    }
+    
+    .menu-container {
+        padding: 80px 5%;
+    }
+
+    .shop-text {
+        font-size: 14px;
+    }
+
+    .shop-item {
+        padding: 15.5px 0;
+    }
+
+    .post-text-content{
+        font-size: 18px;
+    }
+
+    .post-text-date {
+        font-size: 12px;
+    }
+
+    .logo-footer {
+        width: 120px;
+    }
+
+    .shop-list{
+        row-gap: 16px                       ;
+
+    }
+
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1080px) {
+
+    .main-content {
+        margin:0 5%;
+
+    }
+
+    .shop-content {
+        margin: 80px 5% 0;
+        
+    }
+
+    .blog-content {
+        margin: 80px 5% 0;
+
+    }
+
+
+
 
 }

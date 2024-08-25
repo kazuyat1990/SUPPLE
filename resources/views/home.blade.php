@@ -1,8 +1,8 @@
 <x-app-layout>
 
    
-        <div class="">
-            <img src="/img/top/bg-top-kv 1.jpg" alt="main visual">
+        <div class="mainvisual">
+            <img class="main_img" src="/img/top/bg-top-kv 1.jpg" alt="main visual">
         </div>
     <div class=main-content>
         <h2 class="h2-concept">CONCEPT</h2>
@@ -11,9 +11,11 @@
         </div>
         <div class="concept-text">
             <p class="text-20">一杯一杯まごころをこめて調製し、新鮮な香りと豊かな 風味のコーヒーを提供します。</p>
-            <p class="p-text-2">親譲りの無鉄砲で小供の時から損ばかりしている。<br>
-                小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。<br>
+            <div class="p-text-2">
+                <p>親譲りの無鉄砲で小供の時から損ばかりしている。<br>
+                小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。<br class="br_text">
                 なぜそんな無闇をしたと聞く人があるかも知れぬ。</p>
+            </div>
         </div>
     
         <div class="concept-button">
@@ -132,9 +134,6 @@
                 </a>
             @endforeach
         </div>
-            
-   
-                
             
         <div class="button-blog">
             <a href="{{ route('list') }}" class="button-bk english-text">MORE</a>

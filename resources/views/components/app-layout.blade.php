@@ -15,8 +15,10 @@
         <script src="https://cdn.tailwindcss.com"></script>
         <!-- Scripts -->
         
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">                                        
         <link rel="stylesheet" href="/css/color.css">
         <link rel="stylesheet" href="/css/main.css">
+        
         @stack('styles') <!-- CSSファイルをここで読み込み -->
         
     </head>

@@ -55,12 +55,22 @@ padding-top: 8px;
     .post-list{
         flex-direction: column;
         width: 100%;
+        margin-top: 0;
+        row-gap: 0px;
     }
 
     .post-card{
         width: 100%;
         margin-left: 0;
         margin-top: 40px;
+    }
+
+    .blog-content {
+        margin: 24px 5% 0;
+    }
+
+    .post-text-date{
+        font-size: 12px;
     }
 
 

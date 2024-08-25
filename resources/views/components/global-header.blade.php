@@ -17,8 +17,8 @@
             </nav>
         </div>
     </div>
-        <div class="list-sp">
-            <nav>
+        <div >
+            <nav class="list-sp">
                 <ul class="menu-list-sp english-text">
                     <li class="list">CONCEPT</li>
                     <li class="list">MENU</li>

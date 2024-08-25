@@ -17,7 +17,7 @@
                         <img class="post_show_img" src="{{ asset('/' . $post['image'] )}}" alt=post >
                     </div>
                     <div class="post-text">
-                        <p class="post-text-date english-text">{{ $post['created_at'] }}</p>
+                        <p class="post-text-date english-text">{{ $post['created_at']->format('Y/m/d') }}</p>
                         <p class="post-text-title">{{ $post['title'] }}</p>
                         <p class="post-text-contents">{{ $post['content'] }}</p>
                     </div>
